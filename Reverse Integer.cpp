@@ -10,9 +10,9 @@ public:
 	{
 		if(x==INT_MIN)
 			return 0;
-		bool flag=false;
+		bool Is_Neg=false;
 		if(x<0)
-			flag=true;
+			Is_Neg=true;
 		x=abs(x);
 		int res=0;
 		while(x)
@@ -22,7 +22,7 @@ public:
 			res=10*res+x%10;
 			x=x/10;
 		}
-		if(flag)
+		if(Is_Neg)
 			res*=-1;
 		return res;
 	}
